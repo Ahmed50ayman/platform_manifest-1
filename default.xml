@@ -11,12 +11,12 @@
  
   <remote name="mx" fetch="https://github.com/NimaMX" />
  
-  <project path="kernel/rpi" name="raspberry-kernel" remote="mx" />
-  <project path="hardware/rpi" name="rpi-android-hardware" remote="mx" />
-  <project path="device/brcm/rpi3" name="rpi-android-device" remote="mx" />
-  <project path="external/mesa3d" name="rpi-android-mesa-3d" remote="mx"/>
-  <project path="external/drm_gralloc" name="rpi-android-drm-gralloc" remote="mx"/>
-  <project path="hardware/broadcom/libbt" name="rpi-android-brcm-lib" remote="mx"/>
+  <project path="kernel/rpi" name="raspberry-kernel" />
+  <project path="hardware/rpi" name="rpi-android-hardware"/>
+  <project path="device/brcm/rpi3" name="rpi-android-device" />
+  <project path="external/mesa3d" name="rpi-android-mesa-3d" />
+  <project path="external/drm_gralloc" name="rpi-android-drm-gralloc" />
+  <project path="hardware/broadcom/libbt" name="rpi-android-brcm-lib" />
  
  
   <project path="build/make" name="platform/build" groups="pdk" >
