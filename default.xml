@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="mx" fretch="https://github.com/NimaMX/" />
+  
+  <remote name="mx" fretch="https://github.com/NimaMX"/>
+  
   <remote name="private"
-           fetch="ssh://git@github.com" />
+           fetch="ssh://git@github.com"/>
 
   <remote name="aosp"
           fetch="https://android.googlesource.com"
