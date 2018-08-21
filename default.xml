@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="mx" fretch="https://github.com/NimaMX" />
+  <remote name="arpi" fetch="https://github.com/android-rpi"/>
+
+  <remote name="tab-pi" fetch="https://github.com/tab-pi"/>
+
   <remote name="private"
            fetch="ssh://git@github.com" />
 
@@ -8,18 +11,23 @@
           fetch="https://android.googlesource.com"
           review="android-review.googlesource.com" />
 
-  <default revision="refs/tags/android-8.1.0_r38"
+  <default revision="refs/tags/android-7.1.2_r17"
            remote="aosp"
            sync-j="4"
            sync-c="true" />
 
-  <project path="kernel/rpi" name="raspberry-kernel" revision="master" remote="mx"/>
-  <project path="hardware/rpi" name="AnroidRpiHardware" revision="master" remote="mx"/>
-  <project path="device/brcm/rpi3" name="AndroidRpiDevice" revision="master" remote="mx"/>
-  <project path="external/mesa3d" name="AndroidRpiMesa3D" revision="master" remote="mx"/>
-  <project path="external/drm_gralloc" name="AndroidRpiDrmGralloc" revision="master" remote="mx"/>
-  <project path="hardware/broadcom/libbt" name="AndroidRpiBroadcomLIb" revision="master" remote="mx"/>
+  # Our device tree and repos
+  <project path="kernel/rpi" name="kernel_rpi" revision="nougat" remote="tab-pi"/>
+  <project path="hardware/rpi" name="hardware_rpi" revision="nougat" remote="arpi"/>
+  <project path="device/brcm/rpi3" name="device_brcm_rpi3" revision="nougat" remote="tab-pi"/>
+  <project path="external/mesa3d" name="external_mesa3d" revision="nougat" remote="arpi"/>
+  <project path="external/drm_gralloc" name="external_drm_gralloc" revision="nougat" remote="arpi"/>
+  <project path="vendor/tab-pi" name="vendor_tab-pi" revision="nougat" remote="tab-pi"/>
+  <project path="frameworks/native" name="frameworks_native" revision="nougat" remote="tab-pi" groups="pdk" />
+  <project path="frameworks/base" name="frameworks_base" revision="nougat" remote="tab-pi" groups="pdk-cw-fs,pdk-fs" />
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" revision="nougat" remote="tab-pi" groups="pdk" />
 
+  # AOSP
   <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
@@ -319,8 +327,6 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk" />
   <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" />
-  <project path="frameworks/base" name="platform/frameworks/base" groups="pdk" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
