@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <remote name="mx" fretch="https://github.com/NimaMX"/>
  
   <remote  name="aosp"
            fetch=".."
