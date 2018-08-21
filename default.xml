@@ -8,6 +8,8 @@
   <default revision="refs/tags/android-8.1.0_r38"
            remote="aosp"
            sync-j="4" />
+ 
+ <remote name="mx" fetch="https://github.com/NimaMX" />
   
   <project path="build/make" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
