@@ -11,8 +11,7 @@
  
   <remote name="mx" fetch="https://github.com/NimaMX" />
  
-  <project path="kernel/rpi" name="raspberry-kernel" revision="master" />
-
+  <project path="kernel/rpi" name="raspberry-kernel" />
  
  
   <project path="build/make" name="platform/build" groups="pdk" >
