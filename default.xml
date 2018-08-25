@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
  
+  <remote name="mx" fetch="https://github.com/NimaMX" /> 
+  <remote name="private"
+           fetch="ssh://git@github.com" />
+ 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
   
   <default revision="refs/tags/android-8.1.0_r38"
            remote="aosp"
-           sync-j="4" />
- 
-  <remote name="mx" fetch="https://github.com/NimaMX" />
+           sync-j="4"
+           sync-c="true"/>
  
   <project path="kernel/rpi" name="raspberry-kernel" remote="mx" />
   <project path="hardware/rpi" name="rpi-android-hardware" remote="mx" />
