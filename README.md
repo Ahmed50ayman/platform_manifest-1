@@ -25,8 +25,7 @@ use these commands for builing linux kernel :
 * for better performance and quick build , use make with -j [system thread count].
 ```
  $ cd kernel/rpi
- $ ARCH=arm scripts/kconfig/merge_config.sh arch/arm/configs/bcm2709_defconfig android/configs/android-base.cfg 
- android/configs/android-recommended.cfg 
+ $ ARCH=arm scripts/kconfig/merge_config.sh arch/arm/configs/bcm2709_defconfig android/configs/android-base.cfg android/configs/android-recommended.cfg 
  $ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage dtbs 
 ```
 
