@@ -9,7 +9,7 @@ for start , you have to install packages that we need to build and download andr
 for Ubunut 16.04 / 18.04 : 
 ```
  $ sudo apt-get update 
- $ sudo apt-get install openjdk-8-jdk git gcc-arm-linux-gnueabihf
+ $ sudo apt-get install openjdk-8-jdk git gcc-arm-linux-gnueabihf 
 ```
 
 ## Downloading Source code
